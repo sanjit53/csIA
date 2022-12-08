@@ -19,6 +19,7 @@ class WorkoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        editWorkoutLoading()
 
         // Do any additional setup after loading the view.
     }
@@ -55,7 +56,45 @@ class WorkoutViewController: UIViewController {
     }
 
     @IBAction func editWorkoutClicked(_ sender: Any) {
-        //need to get the workout which you want to 
+        //need to get the workout which you want to
+    }
+        
+    func editWorkoutLoading(){
+            let user = Auth.auth().currentUser
+            var uid = ""
+            if let id = user?.uid {
+                uid = id
+            }
+            let db = Firestore.firestore()
+
+            
+            db.collection("users").whereField("uid", isEqualTo: uid)
+                .getDocuments() { [self] (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            let data = document.data()
+                            let progress = data["progress"] as! [String:Any]
+                            let totalWorkouts = progress["totalWorkouts"] as! Int
+    //
+                            let workoutNumber = totalWorkouts + 1
+                            
+                            // input all of the data
+                            //"workout\(workoutNumber)"
+                            let workoutList = data["workoutList"] as! [String:Any]
+                            let workout = workoutList["workout\(workoutNumber)"] as! [String:Any]
+                            let type = workout["type"] as! String
+                            let date = workout["date"] as! String
+                            let duration = workout["duration"] as! String
+
+                            workoutTypeTextField.text? = type
+                            workoutTypeTextField.text? = date
+                            workoutTypeTextField.text? = duration
+
+                    }
+                }
+        }
     }
     /*
     // MARK: - Navigation
