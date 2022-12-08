@@ -47,7 +47,10 @@ class SignUpViewController: UIViewController {
                     let db = Firestore.firestore()
 
                     let newDocument = db.collection("users").document()
-                    newDocument.setData(["firstName":firstName!, "uid": results!.user.uid, "streak": 0, "totalWorkouts": 0]) { error in
+                    newDocument.setData(["firstName":firstName!, "uid": results!.user.uid,
+                            "progress":["streak":1, "totalWorkouts": 0],
+                            "workoutList":
+                                            ["workout1":["type": "", "date": "", "duration":""]]]) { error in
                     
                     if error != nil {
                         //Shor error message
@@ -78,5 +81,4 @@ class SignUpViewController: UIViewController {
         errorLabel.text? = error
         errorLabel.alpha = 2
     }
-  
 }

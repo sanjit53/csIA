@@ -16,10 +16,26 @@ class HomeViewController: UIViewController {
     @IBOutlet var streakLabel: UILabel!
     @IBOutlet var totalWorkoutsLabel: UILabel!
     
+    @IBOutlet var addNewWorkoutsButton: UIButton!
+    @IBOutlet var searchPastWorkoutsButton: UIButton!
+    
+    @IBOutlet var searchWorkoutTextField: UITextField!
+    @IBOutlet var filterButton: UIButton!
+    @IBOutlet var searchButton: UIButton!
+   
+    @IBOutlet var workout1StackView: UIStackView!
+    @IBOutlet var workout2StackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+        loadHomeScreenLabels()
         // Do any additional setup after loading the view.
+        workout1StackView.alpha = 0
+        workout2StackView.alpha = 0
+        
+        Utilities.styleHollowButton(addNewWorkoutsButton)
+        Utilities.styleHollowButton(searchPastWorkoutsButton)
     }
     
     func loadHomeScreenLabels() {
@@ -28,7 +44,9 @@ class HomeViewController: UIViewController {
         if let id = user?.uid {
             uid = id
         }
-        
+            let db = Firestore.firestore()
+
+
         db.collection("users").whereField("uid", isEqualTo: uid)
             .getDocuments() { [self] (querySnapshot, err) in
                 if let err = err {
@@ -36,20 +54,20 @@ class HomeViewController: UIViewController {
                 } else {
                     for document in querySnapshot!.documents {
                         let data = document.data()
-                        let name = data["welcome"] as! String
-                        let streak = data["streak"] as! Int
-                        let totalWorkouts = data["totalWorkouts"] as! Int
-                       
-                        welcomeLabel?.text = "Welcome " + name
+                        let name = data["firstName"] as! String
+                        let progress = data["progress"] as! [String:Any]
+                        let streak = progress["streak"] as! Int
+                        let totalWorkouts = progress["totalWorkouts"] as! Int
+                 
+                        welcomeLabel?.text = "Welcome " + name + "!"
                         
-                       streakLabel?.text = "Current Streak " + streak
-                        
-                        totalWorkoutsLabel?.text = "Total Workouts Compelted " + totalWorkouts
+                       streakLabel?.text = "Current Streak: " + "\(streak)"
+
+                        totalWorkoutsLabel?.text = "Total Workouts Compelted: " +  "\(totalWorkouts)"
                         
                 }
             }
         }
-    }
     }
 
     /*

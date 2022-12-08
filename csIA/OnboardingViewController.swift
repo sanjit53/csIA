@@ -9,8 +9,10 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
 
+    @IBOutlet var signUpButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        Utilities.styleFilledButton(signUpButton)
 
         // Do any additional setup after loading the view.
     }
