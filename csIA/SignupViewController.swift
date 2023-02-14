@@ -48,10 +48,10 @@ class SignUpViewController: UIViewController {
 
                     let newDocument = db.collection("users").document()
                     newDocument.setData(["firstName":firstName!, "uid": results!.user.uid,
-                            "progress":["streak":1, "totalWorkouts": 0],
-                            "workoutList":
-                                            ["workout1":["type": "", "date": "", "duration":""]]]) { error in
-                    
+                                         "progress":["streak":1, "totalWorkouts": 0, "lastWorkoutCompleted":"", "lastWorkoutClicked":""],
+                            ]) { error in
+                        self.performSegue(withIdentifier: "signUpToHome", sender: nil)
+
                     if error != nil {
                         //Shor error message
                         self.showError("Error saving user data ")
@@ -60,7 +60,6 @@ class SignUpViewController: UIViewController {
                 }
             }
         }
-        performSegue(withIdentifier: "signUpToHome", sender: nil)
     }
     
     func validateFields() -> String? {

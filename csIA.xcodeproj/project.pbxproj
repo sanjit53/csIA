@@ -29,7 +29,8 @@
 		2ADF44B02925824800E4CEB5 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF44AF2925824800E4CEB5 /* SignupViewController.swift */; };
 		2ADF44B22925825300E4CEB5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF44B12925825300E4CEB5 /* LoginViewController.swift */; };
 		2ADF44B42925826300E4CEB5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF44B32925826300E4CEB5 /* HomeViewController.swift */; };
-		2ADF44B8292582D900E4CEB5 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF44B7292582D900E4CEB5 /* WorkoutViewController.swift */; };
+		2AE4A6C42992E650002811A5 /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A6C32992E650002811A5 /* WorkoutListViewController.swift */; };
+		2AE4A6C62992E6F9002811A5 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A6C52992E6F9002811A5 /* WorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +70,8 @@
 		2ADF44AF2925824800E4CEB5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		2ADF44B12925825300E4CEB5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2ADF44B32925826300E4CEB5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		2ADF44B7292582D900E4CEB5 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		2AE4A6C32992E650002811A5 /* WorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
+		2AE4A6C52992E6F9002811A5 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,10 +133,11 @@
 				2ADF447D2925721700E4CEB5 /* AppDelegate.swift */,
 				2ADF447F2925721700E4CEB5 /* SceneDelegate.swift */,
 				2ADF44812925721700E4CEB5 /* ViewController.swift */,
-				2ADF44832925721700E4CEB5 /* Main.storyboard */,
-				2A0A329D2941931B00667A26 /* Utilties.swift */,
-				2ADF44B7292582D900E4CEB5 /* WorkoutViewController.swift */,
 				2ADF44B32925826300E4CEB5 /* HomeViewController.swift */,
+				2ADF44832925721700E4CEB5 /* Main.storyboard */,
+				2AE4A6C52992E6F9002811A5 /* WorkoutViewController.swift */,
+				2AE4A6C32992E650002811A5 /* WorkoutListViewController.swift */,
+				2A0A329D2941931B00667A26 /* Utilties.swift */,
 				2ADF44AF2925824800E4CEB5 /* SignupViewController.swift */,
 				2ADF44B12925825300E4CEB5 /* LoginViewController.swift */,
 				2ADF44AD2925821900E4CEB5 /* OnboardingViewController.swift */,
@@ -309,8 +312,9 @@
 			files = (
 				2A0A329E2941931B00667A26 /* Utilties.swift in Sources */,
 				2ADF44B22925825300E4CEB5 /* LoginViewController.swift in Sources */,
+				2AE4A6C62992E6F9002811A5 /* WorkoutViewController.swift in Sources */,
+				2AE4A6C42992E650002811A5 /* WorkoutListViewController.swift in Sources */,
 				2ADF44822925721700E4CEB5 /* ViewController.swift in Sources */,
-				2ADF44B8292582D900E4CEB5 /* WorkoutViewController.swift in Sources */,
 				2ADF447E2925721700E4CEB5 /* AppDelegate.swift in Sources */,
 				2ADF44B02925824800E4CEB5 /* SignupViewController.swift in Sources */,
 				2ADF44802925721700E4CEB5 /* SceneDelegate.swift in Sources */,
@@ -405,6 +409,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -465,6 +470,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;

@@ -15,12 +15,11 @@ class HomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var streakLabel: UILabel!
     @IBOutlet var totalWorkoutsLabel: UILabel!
+    @IBOutlet var lastWorkoutCompleted: UILabel!
     
-    @IBOutlet var addNewWorkoutsButton: UIButton!
     @IBOutlet var searchPastWorkoutsButton: UIButton!
     
     @IBOutlet var searchWorkoutTextField: UITextField!
-    @IBOutlet var filterButton: UIButton!
     @IBOutlet var searchButton: UIButton!
    
     @IBOutlet var workout1StackView: UIStackView!
@@ -34,8 +33,6 @@ class HomeViewController: UIViewController {
         workout1StackView.alpha = 0
         workout2StackView.alpha = 0
         
-        Utilities.styleHollowButton(addNewWorkoutsButton)
-        Utilities.styleHollowButton(searchPastWorkoutsButton)
     }
     
     func loadHomeScreenLabels() {
@@ -58,6 +55,7 @@ class HomeViewController: UIViewController {
                         let progress = data["progress"] as! [String:Any]
                         let streak = progress["streak"] as! Int
                         let totalWorkouts = progress["totalWorkouts"] as! Int
+                        let lastWorkout = progress["lastWorkoutCompleted"] as! [String:Any]
                  
                         welcomeLabel?.text = "Welcome " + name + "!"
                         
@@ -65,10 +63,15 @@ class HomeViewController: UIViewController {
 
                         totalWorkoutsLabel?.text = "Total Workouts Compelted: " +  "\(totalWorkouts)"
                         
+                        lastWorkoutCompleted?.text = "Last Workout Completed: " + "\(lastWorkout)"
                 }
             }
         }
     }
+    
+    @IBAction func searchWorkoutClicked(_ sender: Any) {
+    }
+    
 
     /*
     // MARK: - Navigation
