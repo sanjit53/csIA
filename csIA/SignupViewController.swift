@@ -22,7 +22,6 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         errorLabel.alpha = 0
         // Do any additional setup after loading the view.
-        Utilities.styleFilledButton(nextButton)
     }
 
     @IBAction func signTapped( _ sender: Any) {
@@ -48,8 +47,8 @@ class SignUpViewController: UIViewController {
 
                     let newDocument = db.collection("users").document()
                     newDocument.setData(["firstName":firstName!, "uid": results!.user.uid,
-                                         "progress":["streak":1, "totalWorkouts": 0, "lastWorkoutCompleted":"", "lastWorkoutClicked":""],
-                            ]) { error in
+                                        "streak":0, "totalWorkouts": 0]
+                            ) { error in
                         self.performSegue(withIdentifier: "signUpToHome", sender: nil)
 
                     if error != nil {

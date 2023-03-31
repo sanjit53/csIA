@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A0A329E2941931B00667A26 /* Utilties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A329D2941931B00667A26 /* Utilties.swift */; };
 		2A606B4929418D4700ADC6F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A606B4829418D4700ADC6F6 /* GoogleService-Info.plist */; };
 		2A81F047294186CC00FC96CA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2A81F046294186CC00FC96CA /* FirebaseAnalytics */; };
 		2A81F049294186CC00FC96CA /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2A81F048294186CC00FC96CA /* FirebaseAnalyticsSwift */; };
@@ -18,18 +17,15 @@
 		2A81F053294186CC00FC96CA /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2A81F052294186CC00FC96CA /* FirebaseFirestoreSwift */; };
 		2ADF447E2925721700E4CEB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF447D2925721700E4CEB5 /* AppDelegate.swift */; };
 		2ADF44802925721700E4CEB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF447F2925721700E4CEB5 /* SceneDelegate.swift */; };
-		2ADF44822925721700E4CEB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF44812925721700E4CEB5 /* ViewController.swift */; };
 		2ADF44852925721700E4CEB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADF44832925721700E4CEB5 /* Main.storyboard */; };
 		2ADF44872925721900E4CEB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADF44862925721900E4CEB5 /* Assets.xcassets */; };
 		2ADF448A2925721900E4CEB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADF44882925721900E4CEB5 /* LaunchScreen.storyboard */; };
 		2ADF44952925721A00E4CEB5 /* csIATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF44942925721A00E4CEB5 /* csIATests.swift */; };
 		2ADF449F2925721A00E4CEB5 /* csIAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF449E2925721A00E4CEB5 /* csIAUITests.swift */; };
 		2ADF44A12925721A00E4CEB5 /* csIAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF44A02925721A00E4CEB5 /* csIAUITestsLaunchTests.swift */; };
-		2ADF44AE2925821900E4CEB5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF44AD2925821900E4CEB5 /* OnboardingViewController.swift */; };
 		2ADF44B02925824800E4CEB5 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF44AF2925824800E4CEB5 /* SignupViewController.swift */; };
 		2ADF44B22925825300E4CEB5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF44B12925825300E4CEB5 /* LoginViewController.swift */; };
 		2ADF44B42925826300E4CEB5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF44B32925826300E4CEB5 /* HomeViewController.swift */; };
-		2AE4A6C42992E650002811A5 /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A6C32992E650002811A5 /* WorkoutListViewController.swift */; };
 		2AE4A6C62992E6F9002811A5 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A6C52992E6F9002811A5 /* WorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,12 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2A0A329D2941931B00667A26 /* Utilties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilties.swift; sourceTree = "<group>"; };
 		2A606B4829418D4700ADC6F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2ADF447A2925721700E4CEB5 /* csIA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = csIA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADF447D2925721700E4CEB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ADF447F2925721700E4CEB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2ADF44812925721700E4CEB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2ADF44842925721700E4CEB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ADF44862925721900E4CEB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ADF44892925721900E4CEB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,11 +60,9 @@
 		2ADF449A2925721A00E4CEB5 /* csIAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = csIAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADF449E2925721A00E4CEB5 /* csIAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = csIAUITests.swift; sourceTree = "<group>"; };
 		2ADF44A02925721A00E4CEB5 /* csIAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = csIAUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2ADF44AD2925821900E4CEB5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		2ADF44AF2925824800E4CEB5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		2ADF44B12925825300E4CEB5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2ADF44B32925826300E4CEB5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		2AE4A6C32992E650002811A5 /* WorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
 		2AE4A6C52992E6F9002811A5 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,15 +124,11 @@
 			children = (
 				2ADF447D2925721700E4CEB5 /* AppDelegate.swift */,
 				2ADF447F2925721700E4CEB5 /* SceneDelegate.swift */,
-				2ADF44812925721700E4CEB5 /* ViewController.swift */,
-				2ADF44B32925826300E4CEB5 /* HomeViewController.swift */,
 				2ADF44832925721700E4CEB5 /* Main.storyboard */,
+				2ADF44B32925826300E4CEB5 /* HomeViewController.swift */,
 				2AE4A6C52992E6F9002811A5 /* WorkoutViewController.swift */,
-				2AE4A6C32992E650002811A5 /* WorkoutListViewController.swift */,
-				2A0A329D2941931B00667A26 /* Utilties.swift */,
 				2ADF44AF2925824800E4CEB5 /* SignupViewController.swift */,
 				2ADF44B12925825300E4CEB5 /* LoginViewController.swift */,
-				2ADF44AD2925821900E4CEB5 /* OnboardingViewController.swift */,
 				2ADF44862925721900E4CEB5 /* Assets.xcassets */,
 				2ADF44882925721900E4CEB5 /* LaunchScreen.storyboard */,
 				2ADF448B2925721900E4CEB5 /* Info.plist */,
@@ -310,16 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A0A329E2941931B00667A26 /* Utilties.swift in Sources */,
 				2ADF44B22925825300E4CEB5 /* LoginViewController.swift in Sources */,
 				2AE4A6C62992E6F9002811A5 /* WorkoutViewController.swift in Sources */,
-				2AE4A6C42992E650002811A5 /* WorkoutListViewController.swift in Sources */,
-				2ADF44822925721700E4CEB5 /* ViewController.swift in Sources */,
 				2ADF447E2925721700E4CEB5 /* AppDelegate.swift in Sources */,
 				2ADF44B02925824800E4CEB5 /* SignupViewController.swift in Sources */,
 				2ADF44802925721700E4CEB5 /* SceneDelegate.swift in Sources */,
 				2ADF44B42925826300E4CEB5 /* HomeViewController.swift in Sources */,
-				2ADF44AE2925821900E4CEB5 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

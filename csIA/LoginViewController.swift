@@ -24,9 +24,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel?.alpha = 0
-        Utilities.styleTextField(emailTextField)
-        Utilities.styleTextField(passwordTextField)
-        Utilities.styleFilledButton(loginButton)
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
