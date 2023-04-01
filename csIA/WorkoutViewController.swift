@@ -39,10 +39,8 @@ class WorkoutViewController: UIViewController {
                         
                         db.collection("users").document(docId).updateData(["streak" : streak+1])
                         db.collection("users").document(docId).updateData(["totalWorkouts" : totalWorkouts+1])
-                        
-        }
-
-       }
-    }
-    }
+                }
             }
+        }
+    }
+}

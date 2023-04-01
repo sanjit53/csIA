@@ -78,27 +78,25 @@ class HomeViewController: UIViewController {
     
     @IBAction func searchWorkoutClicked(_ sender: Any) {
         let searchItem:String? = searchWorkoutTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let workoutArray = ["arm","leg","upper", "lower"]
+        let workoutArray = ["arm","leg","abs"]
         
         for workout in workoutArray {
             if searchItem == workout {
                 generateWorkout(type: searchItem!)
             }
         }
-    
-        }
-    
-    @IBAction func searchNavigationButtonClicked(_ sender: Any) {
-        if workoutType1.text == "arm" {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-                self.performSegue(withIdentifier: "searchToArmWorkout", sender: nil)
-            }
-        } else if workoutType1.text == "leg" {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-                self.performSegue(withIdentifier: "searchToLegWorkout", sender: nil)
-            }
-        }
     }
+    
+//    @IBAction func searchNavigationButtonClicked(_ sender: Any) {
+//        if workoutType1.text == "Arm Workout" {
+//            self.performSegue(withIdentifier: "searchToArmWorkout", sender: nil)
+//
+//        } else if workoutType1.text == "leg" {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+//                self.performSegue(withIdentifier: "searchToLegWorkout", sender: nil)
+//            }
+//        }
+//    }
     
     
     func generateWorkout(type: String){
@@ -109,9 +107,9 @@ class HomeViewController: UIViewController {
             difficulty1Label.text = "Easy"
             duration1Label.text = "5 Mintues"
             workoutStackView2.alpha = 1
-            workoutType1.text = "Arm Workout"
-            difficulty1Label.text = "Hard"
-            duration1Label.text = "20 Mintues"
+            workoutType2Label.text = "Arm Workout"
+            difficulty2Label.text = "Hard"
+            duration2Label.text = "20 Mintues"
         case "leg":
             workout1StackView.alpha = 1
             workoutType1.text = "Leg Workout"
